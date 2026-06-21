@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | Greenery Hydroponics</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/checkout.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- ICONS -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="navbar">
+    <div class="nav-logo">
+        <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+        <span class="brand">GREENERY HYDROPONICS</span>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- CHECKOUT SECTION -->
+<section class="checkout-section">
+
+    <h2>Checkout</h2>
+    <p>Fill in your details to complete order</p>
+
+    <div class="checkout-container">
+
+        <!-- FORM -->
+        <form class="checkout-form">
+
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Address" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number" required>
+
+            <select required>
+                <option value="">Payment Method</option>
+                <option>Cash on Delivery</option>
+                <option>GCash (Mock)</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">
+                Place Order
+            </button>
+
+        </form>
+
+        <!-- ORDER SUMMARY -->
+        <div class="order-summary">
+
+            <h3>Order Summary</h3>
+
+            <div id="checkout-items"></div>
+
+            <h4>Total: ₱<span id="checkout-total">0</span></h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

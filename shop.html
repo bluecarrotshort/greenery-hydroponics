@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | Greenery Hydroponics</title>
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- ICONS -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR-->
+    <header class="navbar">
+
+        <div class="nav-logo">
+          <span class="logo-icon">
+            <i class="fa-solid fa-leaf"></i>
+        </span>
+
+        <span class="brand">
+            GREENERY HYDROPONICS
+        </span>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <div class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </ul>
+</nav>
+
+</header>
+
+<!-- SHOP HERO -->
+<section class="shop-hero">
+
+    <div class="container">
+
+        <span class="shop-tag">OUR PRODUCTS</span>
+
+        <h1>Hydroponic Tools Shop</h1>
+
+        <p>
+            Discover premium hydroponic tools, nutrients,
+            and equipment for modern growers.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FILTER -->
+<section class="shop-filter">
+
+    <button class="active">All</button>
+    <button>Grow Lights</button>
+    <button>Pumps</button>
+    <button>Nutrients</button>
+    <button>Meters</button>
+    <button>Kits</button>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="shop-products">
+
+    <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="C:\Users\My PC\Desktop\Hydroponics\image\ph_mter.jpg">
+            </div>
+            <h3>Digital pH Meter</h3>
+            <p>Accurate water testing tool</p>
+            <div class="price">₱599</div>
+            <a href="#" class="btn btn-primary add-to-cart"
+            data-name="Digital pH Meter"
+            data-price="599">
+            Add to Cart
+        </a>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="C:\Users\My PC\Desktop\Hydroponics\image\pump.jpg">
+        </div>
+        <h3>Water Pump</h3>
+        <p>Reliable circulation system</p>
+        <div class="price">₱850</div>
+        <a href="#" class="btn btn-primary add-to-cart"
+        data-name="Water Pump"
+        data-price="850">
+        Add to Cart
+    </a>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="product-card">
+    <div class="product-image">
+        <img src="C:\Users\My PC\Desktop\Hydroponics\image\led.jpg">
+    </div>
+    <h3>LED Grow Light</h3>
+    <p>Energy-efficient plant lighting</p>
+    <div class="price">₱1,299</div>
+    <a href="#" class="btn btn-primary add-to-cart"
+    data-name="Led grow light"
+    data-price="1299">
+    Add to Cart
+</a>
+
+</div>
+<!---- 3 items sa baba ---->
+</div>
+
+</section>
+
+<section class="cart-section">
+
+    <h2>Your Cart</h2>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+
+    <h3>Total: ₱<span id="cart-total">0</span></h3>
+
+    <div class="cart-actions">
+
+        <button onclick="clearCart()" class="btn btn-outline">
+            Clear Cart
+        </button>
+
+        <a href="checkout.html" class="btn btn-primary">
+            Checkout
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+<script src="js/cart.js"></script>
+<script>
+ document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+
+        let name = this.dataset.name;
+        let price = this.dataset.price;
+
+        // use central cart system
+        addToCart(name, price);
+
+        // popup AFTER update
+        alert("Added to Cart!");
+    });
+});
+</script>
+
+
+
+</body>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <span class="logo-icon">
+          <i class="fa-solid fa-leaf"></i>
+      </span>
+
+      <h3>Greenery Hydroponics</h3>
+  </div>
+
+  <p>
+    Grow smarter with modern hydroponic solutions,
+    premium tools, and sustainable farming technology.
+</p>
+</div>
+
+<div class="footer-links">
+  <h4>Quick Links</h4>
+
+  <a href="#">Home</a>
+  <a href="#">Shop</a>
+  <a href="#">Guides</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="footer-contact">
+  <h4>Contact</h4>
+
+  <p>Email: info@greeneryhydro.com</p>
+  <p>Phone: +63 966 318 4942</p>
+  <p>Philippines</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+    © 2026 Greenery Hydroponics. All Rights Reserved.
+</div>
+
+</footer>
+</html>

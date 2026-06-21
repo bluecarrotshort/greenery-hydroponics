@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart | Greenery Hydroponics</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="nav-logo">
+        <span class="logo-icon">
+            <i class="fa-solid fa-leaf"></i>
+        </span>
+        <span class="brand">GREENERY HYDROPONICS</span>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- CART SECTION -->
+<section class="cart-section">
+
+    <div class="section-title">
+        <span>YOUR CART</span>
+        <h2>Shopping Cart</h2>
+        <p>Review your selected hydroponic products</p>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+
+        <h3>Total: ₱<span id="cart-total">0</span></h3>
+
+        <a href="#" class="btn btn-primary">Checkout</a>
+
+        <button onclick="clearCart()" class="btn btn-outline">
+            Clear Cart
+        </button>
+
+    </div>
+
+</section>
+
+<script src="js/cart.js"></script>
+
+</body>
+</html>
